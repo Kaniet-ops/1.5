@@ -65,7 +65,7 @@ window.onload = function () {
         loop: true,
         pagination: {
           el: '.swiper-pagination',
-          clickable: true,
+          // clickable: true,
         },
       })
       $slider.dataset.mobile = 'true'

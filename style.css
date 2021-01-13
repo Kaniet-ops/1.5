@@ -59,105 +59,114 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
+
 .container__title {
-  background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
-  color: #7E7E82;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: -0.2px;
-  line-height: 24px;
   font-family: TT Lakes;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7E7E82;
+  background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
 }
-.container__body {
-  background: #F2F2F2;
-  height: 100vh;
-}
-.swiper-wrapper {
-  display: flex;
-}
-.card {
-  height: 72px;
+.swiper-slide {
   background: #FFFFFF;
   border: 1px solid #EAEAEA;
+  box-sizing: border-box;
   border-radius: 6px;
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
 }
 .container__show {
   display: none;
 }
-.card__img {
-  flex: 1 0 auto;
-}
-.card__link {
-  margin-right: 16px;
-}
-
 @media (min-width: 320px) {
   .container {
-    outline: 1px solid black;
+    height: 100vh;
   }
   .container__title {
-    padding: 16px;
+    padding: 16px 16px;
   }
-  .container__body {
-    padding: 16px;
-  }
-  .card {
-    flex-wrap: nowrap;
-    width: 240px !important;
-  }
-  .container__cards {
-    margin-right: 16px;
-  }
-  .ds {
-
-  }
-  .container__footer {
+  .swiper-container {
+    background: #F2F2F2;
+    height: 154px;
     width: 100%;
-    margin: 26px 0;
+  }
+  .container__main {
+    padding-top: 16px;
+  }
+  .swiper-slide {
+    width: 240px !important;
+    height: 72px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
   .swiper-pagination {
-    width: 280px;
+    bottom: 25px !important;
   }
   .swiper-pagination-bullet {
+    background: #DDDDDD;
     width: 12px;
     height: 12px;
-    margin-right: 8px;
-    background: #DDDDDD;
     opacity: 1;
   }
   .swiper-pagination-bullet-active {
     background: #B5B6BC;
   }
 }
+
 @media (min-width: 768px) {
-  .container {
-    outline: 1px solid red;
+  .swiper-pagination {
+    display: none;
+  }
+  .container__main {
+    padding-top: 8px;
+  }
+  .swiper-container {
+    height: 100%;
   }
   .container__title {
-    padding: 16px 24px;
-  }
-  .container__body {
-    padding: 24px;
+    padding: 16px 0 16px 3.5%;
   }
   .swiper-wrapper {
     flex-wrap: wrap;
+    height: unset;
+    /*justify-content: center;*/
+    align-items: center;
+    margin-left: 2%;
   }
-  .card {
-    width: 224px !important;
+  .swiper-slide {
+    flex-grow: 0;
+    width: 29% !important;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container__slider {
+    margin-left: 1.5% !important;
+    margin-right: 1.5% !important;
+    margin-top: 16px;
+  }
+  .swiper-slide__brand {
+    flex: 0 0 auto;
+    margin-left: 6%;
+  }
+  .swiper-slide__link {
+    display: flex;
+    justify-content: right;
+
+  }
+  .swiper-slide__arrow {
+    padding-right: 26%;
     flex: 1 1 auto;
   }
-  .container__cards {
-    margin-bottom: 16px;
+  .container__slider_notActive {
+    display: none;
   }
   .container__show {
     display: flex;
     cursor: pointer;
+    margin-top: 24px;
+    margin-left: 4%;
   }
   .container__arrow {
     font-family: TT Lakes;
@@ -169,31 +178,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     color: #1B1C21;
     margin-left: 16px;
   }
-  .container__cards_notActive {
-    display: none;
-  }
-  .container__footer {
-    display: none;
-  }
 }
 @media (min-width: 1120px) {
   .container {
-    outline: 1px solid green;
+    width: 1120px;
+    margin: auto;
   }
   .container__title {
-    padding: 16px 32px;
+    padding: 16px 0 16px 28px;
   }
-  .container__body {
-    padding: 24px 32px;
+  .swiper-wrapper {
+    margin-left: 1%;
   }
-  .container__cards {
-    margin-right: 32px;
-    margin-bottom: 16px;
+  .swiper-slide {
+    width: 240px !important;
   }
-  .card {
-    flex: 0 0 auto;
-  }
-  .container__footer {
-    display: none;
+  .container__show {
+    margin-left: 3%;
   }
 }
+
+
