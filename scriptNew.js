@@ -22,7 +22,7 @@ window.onload = function() {
       showAllIcon()
     }
   })
-
+  mobileSlider($slider)
   desktopShowIcon()
 
   function mobileSlider($slider) {
